@@ -17,6 +17,7 @@ cat("==========","\n")
 ```
 In terminal:
 ```
+cd /home/Documents
 Rscript test.R $(pwd)
 ```
 Then get:
