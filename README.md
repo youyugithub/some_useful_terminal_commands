@@ -26,3 +26,9 @@ Then get:
 /home/Documents
 ==========
 ```
+
+### copy all contents in folder1 to folder2
+```
+cp -a folder1/. folder2
+```
+ref: https://askubuntu.com/questions/86822/how-can-i-copy-the-contents-of-a-folder-to-another-folder-in-a-different-directo
