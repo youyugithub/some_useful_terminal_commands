@@ -32,3 +32,10 @@ Then get:
 cp -a folder1/. folder2
 ```
 ref: https://askubuntu.com/questions/86822/how-can-i-copy-the-contents-of-a-folder-to-another-folder-in-a-different-directo
+
+### specify python 3/2 when installing libraries
+```
+python3 -m pip install seaborn
+python3 -m pip install seaborn
+```
+
