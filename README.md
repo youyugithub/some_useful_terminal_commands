@@ -5,6 +5,7 @@
 (all .out files in the subfolders are also deleted.)
 ```
 find . -type f -iname \*.out -delete
+find . -name "*.out" -type f -delete
 ```
 
 ### delete ALL executables (without extensions)
