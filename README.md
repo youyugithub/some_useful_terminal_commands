@@ -10,10 +10,19 @@ find . -name "*.out" -type f -delete
 
 ### delete ALL executables (without extensions)
 (all executable files in the subfolders are also deleted.)
+
+Ubuntu:
 ```
 find . -type f -executable -delete
 ```
+
+MacOC:
+```
+find . -perm +111 -type f -delete
+```
+
 Ref: https://stackoverflow.com/questions/856463/how-to-remove-delete-executable-files-aka-files-without-extension-only
+Ref: https://apple.stackexchange.com/questions/116367/find-all-executable-files-within-a-folder-in-terminal
 
 ### pass current directory as an argument to R
 In R:
