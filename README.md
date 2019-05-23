@@ -55,4 +55,31 @@ ref: https://askubuntu.com/questions/86822/how-can-i-copy-the-contents-of-a-fold
 python3 -m pip install seaborn
 python3 -m pip install seaborn
 ```
+### for loop
+```
+for p1 in 0.05 0.075 0.1 0.25 0.5
+do
+    for i in {0..150..5}
+    do
+        python myscript.py -p p1 -v i
+    done
+done
+```
+ref: https://stackoverflow.com/questions/41900600/slurm-sbatch-job-array-for-the-same-script-but-with-different-input-arguments-ru
 
+### passing arguments
+In terminal:
+```
+$ sbatch myscript.sh myinput myoutput
+```
+In sh.:
+```
+#!/bin/bash
+
+#SBATCH ...
+#SBATCH ...
+...
+# argument 1 is myinput
+# argument 2 is myoutput
+mybinary.x < ${1} > ${2}
+```
