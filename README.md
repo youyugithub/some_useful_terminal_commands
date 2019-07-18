@@ -72,7 +72,7 @@ In terminal:
 ```
 $ sbatch myscript.sh myinput myoutput
 ```
-In sh.:
+In .sh:
 ```
 #!/bin/bash
 
@@ -82,4 +82,21 @@ In sh.:
 # argument 1 is myinput
 # argument 2 is myoutput
 mybinary.x < ${1} > ${2}
+```
+
+### passing arguments (2)
+
+In terminal:
+```
+$ sbatch myscript.sh myscript
+```
+In .sh
+```
+#!/bin/bash
+
+#SBATCH ...
+#SBATCH ...
+...
+# argument 1 is myscript
+Rscript ${1}
 ```
