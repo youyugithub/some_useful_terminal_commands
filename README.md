@@ -100,3 +100,22 @@ In .sh
 # argument 1 is myscript
 Rscript ${1}
 ```
+
+## compare documents/directories: diff
+```
+diff file1 file2
+diff dir1 dir2
+```
+
+## combine pdf
+
+```
+cpdf () {    gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"; }
+cpdf merged.pdf 1.pdf 2.pdf
+```
+
+## directory structure
+
+```
+tree .
+```
