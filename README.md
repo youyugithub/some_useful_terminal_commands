@@ -112,6 +112,10 @@ diff dir1 dir2
 ```
 cpdf () {    gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"; }
 cpdf merged.pdf 1.pdf 2.pdf
+
+## combing all jpg to pdf
+convert *.jpg pictures.pdf
+convert 1.jpg 2.jpg pictures.pdf
 ```
 
 ## directory structure
