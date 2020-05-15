@@ -123,3 +123,9 @@ convert 1.jpg 2.jpg pictures.pdf
 ```
 tree .
 ```
+
+## unzip unrar
+
+```
+unrar x ...
+```
