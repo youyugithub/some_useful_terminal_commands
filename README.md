@@ -129,3 +129,14 @@ tree .
 ```
 unrar x ...
 ```
+
+## split video into different parts
+
+(in a fast way)
+```
+ffmpeg -i xxx.mov -ss 00:00:00 -t 00:25:00 -c copy part1.mov
+ffmpeg -i xxx.mov -ss 00:25:00 -t 00:25:00 -c copy part2.mov
+ffmpeg -i xxx.mov -ss 00:50:00 -t 00:25:00 -c copy part3.mov
+ffmpeg -i xxx.mov -ss 01:15:00 -t 00:25:00 -c copy part4.mov
+ffmpeg -i xxx.mov -ss 01:40:00 -t 00:25:00 -c copy part5.mov
+```
