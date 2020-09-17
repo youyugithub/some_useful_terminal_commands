@@ -130,6 +130,12 @@ tree .
 unrar x ...
 ```
 
+## zip with password
+
+```
+zip -er zipname.zip /foldername
+```
+
 ## split video into different parts
 
 (in a fast way)
