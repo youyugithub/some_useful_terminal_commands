@@ -146,3 +146,24 @@ ffmpeg -i xxx.mov -ss 00:50:00 -t 00:25:00 -c copy part3.mov
 ffmpeg -i xxx.mov -ss 01:15:00 -t 00:25:00 -c copy part4.mov
 ffmpeg -i xxx.mov -ss 01:40:00 -t 00:25:00 -c copy part5.mov
 ```
+
+## launch docker
+
+The docker setup does not work as in a normal Linux machine, on a Mac it is much more complicated. But it can be done!
+
+https://apple.stackexchange.com/questions/373888/how-do-i-start-the-docker-daemon-on-macos
+
+```
+brew cask install docker virtualbox
+brew install docker-machine
+docker-machine create --driver virtualbox default
+docker-machine restart
+eval "$(docker-machine env default)" # This might throw an TSI connection error. In that case run docker-machine regenerate-certs default
+(docker-machine restart) # maybe needed
+docker run hello-world
+```
+
+These steps are based on information given in these two questions:
+
+Cannot connect to the Docker daemon on macOS
+Mac OS X sudo docker Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
