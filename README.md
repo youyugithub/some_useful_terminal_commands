@@ -167,3 +167,10 @@ These steps are based on information given in these two questions:
 
 Cannot connect to the Docker daemon on macOS
 Mac OS X sudo docker Cannot connect to the Docker daemon. Is the docker daemon running on this host?.
+
+## slurm
+
+```
+squeue -u <username>
+scancel -u <username>
+```
