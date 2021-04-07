@@ -174,3 +174,14 @@ Mac OS X sudo docker Cannot connect to the Docker daemon. Is the docker daemon r
 squeue -u <username>
 scancel -u <username>
 ```
+
+## RNAseq related
+
+```
+zcat ERR458493.fastq.gz | head
+
+for ACC_NR in ERR458493 ERR458494 ERR458495 ERR458496 ERR458497 ERR458498
+do
+  wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR458/${ACC_NR}/${ACC_NR}.fastq.gz
+done
+```
