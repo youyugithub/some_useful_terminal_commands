@@ -185,3 +185,18 @@ do
   wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR458/${ACC_NR}/${ACC_NR}.fastq.gz
 done
 ```
+
+## git
+
+```
+$ git init
+($ git status)
+$ git add mars.txt
+($ git status)
+$ git commit -m "some comments"
+
+$ git push
+Uploads all local branch commits to GitHub
+$ git pull
+Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. git pull is a combination of git fetch and git merge
+```
