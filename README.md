@@ -200,3 +200,9 @@ Uploads all local branch commits to GitHub
 $ git pull
 Updates your current local working branch with all new commits from the corresponding remote branch on GitHub. git pull is a combination of git fetch and git merge
 ```
+## convert pdf to eps/ps
+
+```
+pdf2ps cputime.pdf cputime.ps # pdf to ps
+ps2eps -l -r 500 cputime.ps # ps to eps
+```
