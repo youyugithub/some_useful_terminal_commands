@@ -206,3 +206,37 @@ Updates your current local working branch with all new commits from the correspo
 pdf2ps cputime.pdf cputime.ps # pdf to ps
 ps2eps -l -r 500 cputime.ps # ps to eps
 ```
+
+## run multiple .sh
+
+https://stackoverflow.com/questions/41079143/run-all-shell-scripts-in-folder
+
+Use this:
+
+```
+for f in *.sh; do
+  bash "$f" 
+done
+```
+If you want to stop the whole execution when a script fails:
+```
+for f in *.sh; do
+  bash "$f" || break  # execute successfully or break
+  # Or more explicitly: if this execution fails, then stop the `for`:
+  # if ! bash "$f"; then break; fi
+done
+```
+If you want to run, e.g., x1.sh, x2.sh, ..., x10.sh:
+```
+for i in `seq 1 10`; do
+  bash "x$i.sh" 
+done
+```
+To preserve exit code of failed script (responding to @VespaQQ):
+```
+#!/bin/bash
+set -e
+for f in *.sh; do
+  bash "$f"
+done
+```
